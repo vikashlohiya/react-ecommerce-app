@@ -10,7 +10,16 @@ const Login = () => {
   const [formError, setformError] = useState(0);
   const submitLogin = (e) => {
     e.preventDefault();
-    const serverurl = process.env.REACT_APP_SERVER_URL_KEY;
+
+    if(loginForm.email==='vikashlogupt@gmail.com' && loginForm.password==='123456'){
+      localStorage.setItem('userid', 1);
+      localStorage.setItem('uname', 'vikash');
+      //<Navigate replace to="/products" />
+   window.location.href="/products"
+    }else{
+      setformError(1);
+    }
+   /* const serverurl = process.env.REACT_APP_SERVER_URL_KEY;
     axios.post(serverurl+'?action=login',loginForm)
     .then(response => {
      
@@ -30,7 +39,7 @@ const Login = () => {
       }
     localStorage.setItem('userid', response.data.user_id);
 
-  });
+  }); */
 }
   const elementClick = (e) => {
     setFormClick(0);
