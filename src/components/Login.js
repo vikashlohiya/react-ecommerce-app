@@ -80,6 +80,8 @@ const Login = () => {
                   <button type="submit" className="btn btn-primary " onClick={submitLogin}>Login</button>
                 </div>
               </form>
+              <div><strong>Email:</strong> vikashlogupt@gmail.com</div>
+              <div><strong>Password:</strong>123456</div>
             </div>
           </div>
         </div>
